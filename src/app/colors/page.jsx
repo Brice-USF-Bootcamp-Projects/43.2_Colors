@@ -2,10 +2,10 @@
 
 "use client";
 import Link from "next/link";
-import useColors from "./colorsData";
+import { useColors } from "../context/ColorsContext";
 
 export default function ColorsPage() {
-  const { colors } = useColors();
+  const { colors } = useColors(); // 🔄 Use global color state
 
   return (
     <div className="p-6 text-center">
@@ -23,3 +23,4 @@ export default function ColorsPage() {
     </div>
   );
 }
+

@@ -3,17 +3,10 @@
 /my-color-factory
  ├── /app
  │   ├── /colors
- │   │   ├── page.js       (Lists all colors)
+ │   │   ├── page.js      (List colors)
  │   │   ├── /new
- │   │   │   ├── page.js   (Form to add a new color)
+ │   │   │   ├── page.js  (Add new color)
  │   │   ├── /[color]
- │   │   │   ├── page.js   (Dynamic color page)
- │   ├── /components
- │   │   ├── ColorList.js  (Shows color list)
- │   │   ├── ColorForm.js  (Form for new color)
- │   │   ├── Navbar.js     (Navigation Bar)
- │   ├── /not-found
- │   │   ├── page.js       (Redirects invalid URLs)
- ├── /styles
- │   ├── globals.css       (Global styles)
- ├── package.json
+ │   │   │   ├── page.js  (Show selected color)
+ │   ├── /context
+ │   │   ├── ColorsContext.js  (Global color state)

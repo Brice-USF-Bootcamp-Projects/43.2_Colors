@@ -3,7 +3,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import useColors from "../colorsData";
+import { useColors } from "../../context/ColorsContext";
 
 export default function NewColorPage() {
   const { addColor } = useColors();
@@ -14,8 +14,8 @@ export default function NewColorPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!name.trim()) return;
-    addColor(name, hex);
-    router.push("/colors");
+    addColor(name, hex); // ✅ Persist color in global state
+    router.push("/colors"); // ✅ Redirect after adding
   };
 
   return (
@@ -43,3 +43,4 @@ export default function NewColorPage() {
     </div>
   );
 }
+

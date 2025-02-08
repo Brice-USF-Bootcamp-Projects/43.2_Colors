@@ -3,7 +3,7 @@
 
 "use client";
 import { useParams, useRouter } from "next/navigation";
-import useColors from "../colorsData";
+import { useColors } from "../../context/ColorsContext";
 
 export default function ColorPage() {
   const { colors } = useColors();
@@ -19,8 +19,8 @@ export default function ColorPage() {
 
   return (
     <div className="h-screen flex flex-col items-center justify-center" style={{ backgroundColor: color.hex }}>
-      <h1 className="text-4xl text-white font-bold">This is {color.name}</h1>
-      <p className="text-lg text-white">{color.hex}</p>
+      <h1 className="text-4xl text-black font-bold">This is {color.name}</h1>
+      <p className="text-lg text-black">{color.hex}</p>
       <button onClick={() => router.push("/colors")} className="mt-4 bg-white text-black px-4 py-2 rounded">
         ← Back to Colors
       </button>
